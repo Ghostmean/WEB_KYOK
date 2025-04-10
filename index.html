@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>КУОК - Музыкальная Коллекция</title>
+    <meta name="description" content="Коллекция музыкальных альбомов артиста КУОК" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="light-theme">
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <div class="logo">КУОК</div>
+        <ul class="nav-links">
+          <li><a href="#artist">Об артисте</a></li>
+          <li><a href="#top-tracks">Топ треки</a></li>
+          <li><a href="#albums">Альбомы</a></li>
+          <li><a href="#singles">Синглы</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <span class="theme-label">Тема:</span>
+          <button id="theme-toggle-btn" aria-label="Переключить тему">
+            <span class="toggle-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <h1 class="site-title">Музыкальная Коллекция</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Секция с информацией об артисте -->
+        <section id="artist" class="artist-section">
+          <div class="artist-card">
+            <div class="artist-img-container">
+              <img src=https://sun9-64.userapi.com/impg/dN5293VfkS0vqqtcydxRbV5o6xY9BR_EJGLp-A/paTTm9ePDd8.jpg?size=604x604&quality=95&sign=cd4e58ba71f9cc1766a20bf7934a5faa&type=album alt="КУОК" class="artist-img">
+            </div>
+            <div class="artist-info">
+              <h2 class="artist-name">КУОК</h2>
+              <p class="artist-bio">КУОК — российский музыкальный исполнитель, известный своим уникальным стилем, сочетающим элементы хип-хопа, электроники и альтернативной музыки. За свою карьеру выпустил несколько успешных альбомов и синглов, собирая миллионы прослушиваний на стриминговых платформах.</p>
+              <div class="artist-stats">
+                <div class="stat">
+                  <span class="stat-value">5</span>
+                  <span class="stat-label">Альбомов</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">Синглов</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">15.5M</span>
+                  <span class="stat-label">Прослушиваний</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция с топ треками -->
+        <section id="top-tracks" class="top-tracks-section">
+          <h2 class="section-title">Топ треки</h2>
+          <div class="top-tracks-container" id="top-tracks-container">
+            <!-- Здесь будут отображаться топ треки -->
+          </div>
+        </section>
+
+        <!-- Секция с альбомами -->
+        <section id="albums" class="albums-section">
+          <h2 class="section-title">Альбомы</h2>
+          <div class="album-filters">
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="Поиск альбома..." />
+            </div>
+            <div class="sort-options">
+              <label for="sort-select">Сортировать по:</label>
+              <select id="sort-select">
+                <option value="year-desc">Году (новые сначала)</option>
+                <option value="year-asc">Году (старые сначала)</option>
+                <option value="listens-desc">Прослушиваниям (по убыванию)</option>
+                <option value="listens-asc">Прослушиваниям (по возрастанию)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="albums-grid" id="albums-container"></div>
+        </section>
+
+        <!-- Секция с синглами -->
+        <section id="singles" class="singles-section">
+          <h2 class="section-title">Синглы</h2>
+          <div class="singles-grid" id="singles-container"></div>
+        </section>
+      </div>
+    </main>
+
+    <div class="album-modal" id="album-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-album-title"></h2>
+          <button class="close-modal-btn" id="close-modal-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-album-img-container">
+            <img id="modal-album-img" src="" alt="Обложка альбома" />
+          </div>
+          <div class="modal-album-info">
+            <p><strong>Исполнитель:</strong> <span id="modal-album-artist"></span></p>
+            <p><strong>Год выпуска:</strong> <span id="modal-album-year"></span></p>
+            <p><strong>Прослушиваний:</strong> <span id="modal-album-listens"></span></p>
+            <div class="album-tracks" id="modal-album-tracks"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 КУОК - Музыкальная Коллекция</p>
+      </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
