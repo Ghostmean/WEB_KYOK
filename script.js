@@ -7,13 +7,31 @@ const albums = [
     artist: "КУОК",
     year: 2022,
     listens: 4250000,
-    cover: "https://avatars.mds.yandex.net/i?id=b568cd0307fd7fc0afae69f2fa1ee7cf21f91606-7012645-images-thumbs&n=13",
+    cover: "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2Fcfc8d727402e2d58a6ef3fbbfb73d3f7.1000x1000x1.png",
     tracks: [
-      { number: 1, title: "Вступление", duration: "1:15" },
-      { number: 2, title: "Неоновые огни", duration: "3:42" },
-      { number: 3, title: "Ночной проспект", duration: "4:21" },
-      { number: 4, title: "Дождь и асфальт", duration: "3:56" },
-      { number: 5, title: "Последний трамвай", duration: "5:10" }
+      { number: 1, title: "Интро", duration: "1:15" },
+      { number: 2, title: "Отвали, я в норме", duration: "3:42" },
+      { number: 3, title: "Перезгрузка", duration: "4:21" },
+      { number: 4, title: "Ножевое", duration: "3:56" },
+      { number: 5, title: "Ворк слип репит 2", duration: "5:10" },
+      { number: 6, title: "Quvi", duration: "5:10" },
+      { number: 7, title: "Успокой меня", duration: "5:10" },
+      { number: 8, title: "Помолчим об этом", duration: "5:10" },
+      { number: 9, title: "Слова,которых нет", duration: "5:10" },
+      { number: 10, title: "Apathy Theme", duration: "5:10" },
+      { number: 11, title: "Дофамин", duration: "5:10" },
+      { number: 12, title: "Метаморфозы", duration: "5:10" },
+      { number: 13, title: "Наивность", duration: "5:10" },
+      { number: 14, title: "Бежим", duration: "5:10" },
+      { number: 15, title: "Далеко и надолго", duration: "5:10" },
+      { number: 16, title: "Concorde", duration: "5:10" },
+      { number: 17, title: "Roztoky", duration: "5:10" },
+      { number: 18, title: "Миллион мегатон", duration: "5:10" },
+      { number: 19, title: "Imago", duration: "5:10" },
+      { number: 20, title: "Inner", duration: "5:10" },
+      { number: 21, title: "Lo Siento", duration: "5:10" },
+      { number: 22, title: "Кислота", duration: "5:10" },
+      { number: 23, title: "Планета не вращается", duration: "5:10" }
     ]
   },
   {
@@ -24,18 +42,23 @@ const albums = [
     listens: 3180000,
     cover: "https://avatars.mds.yandex.net/i?id=bcfeaeec22061eae76478b1adc69234490655814-5310620-images-thumbs&n=13",
     tracks: [
-      { number: 1, title: "Старт", duration: "2:30" },
-      { number: 2, title: "Невесомость", duration: "4:15" },
-      { number: 3, title: "Далекие планеты", duration: "3:48" },
-      { number: 4, title: "Космическая пыль", duration: "5:22" },
-      { number: 5, title: "Возвращение", duration: "4:04" }
+      { number: 1, title: "Дорогое развлечение (Costly Entertainment)", duration: "2:30" },
+      { number: 2, title: "Соучастница (Accomplice)", duration: "4:15" },
+      { number: 3, title: "Исповедь (Confession)", duration: "3:48" },
+      { number: 4, title: "Кто и зачем? (Who And Why?)", duration: "5:22" },
+      { number: 5, title: "Птица (The Bird)", duration: "4:04" },
+      { number: 6, title: "Sabbath", duration: "5:10" },
+      { number: 7, title: "​v90 Nilsson", duration: "5:10" },
+      { number: 8, title: "Русская душа (Russian Soul)", duration: "5:10" },
+      { number: 9, title: "Qualia", duration: "5:10" },
+      { number: 10, title: "Малый успех (Small success)", duration: "5:10" }
     ]
   },
   {
     id: 3,
     title: "ДЖАНГЛ",
     artist: "КУОК",
-    year: 2018,
+    year: 2023,
     listens: 2750000,
     cover: "https://avatars.mds.yandex.net/i?id=b57112c1cec300cb1d87f3345fca751197e5203c-4709556-images-thumbs&n=13",
     tracks: [
@@ -50,7 +73,7 @@ const albums = [
     id: 4,
     title: "DECADANCE 2",
     artist: "КУОК",
-    year: 2016,
+    year: 2019,
     listens: 1980000,
     cover: "https://avatars.mds.yandex.net/i?id=3e81566dce9968b953d62922b55990df105f15d7-5225010-images-thumbs&n=13",
     tracks: [
@@ -65,9 +88,30 @@ const albums = [
     id: 5,
     title: "AD/HD 1725",
     artist: "КУОК",
-    year: 2015,
+    year: 2025,
     listens: 1560000,
     cover: "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F790b78c1d819d3978ccbcca22426fc62.1000x1000x1.png",
+    tracks: [
+      { number: 1, title: "U Promise", duration: "1:15" },
+      { number: 2, title: "Coma (VIP) ", duration: "3:42" },
+      { number: 3, title: "Metamorphosis [17/25 ADHD]", duration: "4:21" },
+      { number: 4, title: "Megapolis ", duration: "3:56" },
+      { number: 5, title: "Rumblecore (Genesis / Idi Za Mnoj Flip)", duration: "5:10" },
+      { number: 6, title: "BADBOYNOHEAD", duration: "5:10" },
+      { number: 7, title: "Wobblegum", duration: "5:10" },
+      { number: 8, title: "Punch It! ", duration: "5:10" },
+      { number: 9, title: "Nozhevoje", duration: "5:10" },
+      { number: 10, title: "StoneIsland [17/25 ADHD]", duration: "5:10" },
+      { number: 11, title: "UNA (Deathoria Remix)", duration: "5:10" }
+    ]
+  },
+  {
+    id: 6,
+    title: "QUVI",
+    artist: "КУОК",
+    year: 2025,
+    listens: 1560000,
+    cover: "https://images.genius.com/8f2e0c4bb1ef0ff901c31dabc03404a9.300x300x1.png",
     tracks: [
       { number: 1, title: "Детство", duration: "3:40" },
       { number: 2, title: "Школьные годы", duration: "3:25" },
@@ -75,53 +119,83 @@ const albums = [
       { number: 4, title: "Взросление", duration: "3:58" },
       { number: 5, title: "Настоящее", duration: "4:05" }
     ]
-  }
+  },
+  {
+    id: 7,
+    title: "Love,Blood and Diamonds",
+    artist: "КУОК",
+    year: 2025,
+    listens: 1560000,
+    cover: "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F0f79a00ede914cf6072fedce25ddbc21.1000x1000x1.png",
+    tracks: [
+      { number: 1, title: "Детство", duration: "3:40" },
+      { number: 2, title: "Школьные годы", duration: "3:25" },
+      { number: 3, title: "Первая любовь", duration: "4:12" },
+      { number: 4, title: "Взросление", duration: "3:58" },
+      { number: 5, title: "Настоящее", duration: "4:05" }
+    ]
+  },
+  {
+    id: 8,
+    title: "DECADANCE 3",
+    artist: "КУОК",
+    year: 2025,
+    listens: 1560000,
+    cover: "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F884d71c4fe59911c69852ee8a06bd957.1000x1000x1.png",
+    tracks: [
+      { number: 1, title: "Детство", duration: "3:40" },
+      { number: 2, title: "Школьные годы", duration: "3:25" },
+      { number: 3, title: "Первая любовь", duration: "4:12" },
+      { number: 4, title: "Взросление", duration: "3:58" },
+      { number: 5, title: "Настоящее", duration: "4:05" }
+    ]
+  },
 ];
 
 // Данные синглов
 const singles = [
   {
     id: 101,
-    title: "Летний дождь",
+    title: "CORRIDA",
     artist: "КУОК",
-    year: 2023,
+    year: 2021,
     listens: 980000,
-    cover: "https://raw.githubusercontent.com/gptengineer-ai/gptengineer-images/main/photo-1649972904349-6e44c42644a7.webp",
+    cover: "https://i.ytimg.com/vi/HablFXGUZq4/maxresdefault.jpg",
     tracks: [
-      { number: 1, title: "Летний дождь", duration: "3:25" }
+      { number: 1, title: "CORRIDA", duration: "3:15" }
     ]
   },
   {
     id: 102,
-    title: "Высокие скорости",
+    title: "Воздух",
     artist: "КУОК",
-    year: 2022,
+    year: 2021,
     listens: 850000,
-    cover: "https://raw.githubusercontent.com/gptengineer-ai/gptengineer-images/main/photo-1519389950473-47ba0277781c.webp",
+    cover: "https://images.genius.com/21566d33c83ead1d6e46836802cc6a1e.1000x1000x1.png",
     tracks: [
-      { number: 1, title: "Высокие скорости", duration: "3:18" }
+      { number: 1, title: "Воздух", duration: "2:45" }
     ]
   },
   {
     id: 103,
-    title: "Новый день",
+    title: "UNA",
     artist: "КУОК",
-    year: 2021,
+    year: 2023,
     listens: 720000,
-    cover: "https://raw.githubusercontent.com/gptengineer-ai/gptengineer-images/main/photo-1581091226825-a6a2a5aee158.webp",
+    cover: "https://images.genius.com/f9f1ff800293054628ef749079336d20.1000x1000x1.png",
     tracks: [
-      { number: 1, title: "Новый день", duration: "4:05" }
+      { number: 1, title: "UNA", duration: "3:29" }
     ]
   },
   {
     id: 104,
-    title: "Звездопад",
+    title: "WAKARIMASEN",
     artist: "КУОК",
-    year: 2020,
+    year: 2022,
     listens: 650000,
-    cover: "https://raw.githubusercontent.com/gptengineer-ai/gptengineer-images/main/photo-1486312338219-ce68d2c6f44d.webp",
+    cover: "https://images.genius.com/09639b28041b0d48abd3c794648bae23.1000x1000x1.png",
     tracks: [
-      { number: 1, title: "Звездопад", duration: "3:42" }
+      { number: 1, title: "WAKARIMASEN", duration: "2:09" }
     ]
   }
 ];
