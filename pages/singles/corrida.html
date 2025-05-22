@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORRIDA - КУОК</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="../../index.html" class="nav-logo">КУОК</a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="../../index.html#top-tracks">Топ треки</a>
+                <a href="../../index.html#albums">Альбомы</a>
+                <a href="../../index.html#singles">Синглы</a>
+            </div>
+            <div class="theme-toggle">
+                <span class="theme-label">Тема:</span>
+                <button id="theme-toggle-btn">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="album-page">
+                <div class="album-header">
+                    <div class="album-cover">
+                        <img src="https://i.ytimg.com/vi/HablFXGUZq4/maxresdefault.jpg" alt="CORRIDA">
+                    </div>
+                    <div class="album-details">
+                        <h1 class="album-title">CORRIDA</h1>
+                        <div class="album-info">
+                            <p><strong>Исполнитель:</strong> КУОК</p>
+                            <p><strong>Год выпуска:</strong> 2021</p>
+                            <p><strong>Прослушиваний:</strong> 980K</p>
+                            <p><strong>Тип:</strong> Сингл</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracks-section">
+                    <h2 class="section-title">Список треков</h2>
+                    <ul class="track-list">
+                        <li class="track-item">
+                            <span class="track-number">1</span>
+                            <span class="track-title">CORRIDA</span>
+                            <span class="track-duration">3:15</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 КУОК - Музыкальная Коллекция</p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+        // Инициализация темы
+        function loadSavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.getElementById('theme-toggle-btn').textContent = '☀️';
+            }
+        }
+
+        // Обработчик для кнопки переключения темы
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Загрузка темы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadSavedTheme);
+    </script>
+</body>
+
+</html>
