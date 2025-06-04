@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../css/single.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../../js/script.js" defer></script>
-    <script src="../../js/single.js" defer></script>
 </head>
 
 <body class="light-theme">
@@ -54,6 +53,73 @@
             </div>
         </div>
     </main>
+
+    <script>
+        // Загрузка данных сингла при загрузке страницы
+        document.addEventListener('DOMContentLoaded', async() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const singleId = urlParams.get('id');
+
+            if (singleId) {
+                try {
+                    // Пробуем получить данные из localStorage
+                    let singleData = JSON.parse(localStorage.getItem('currentSingle'));
+
+                    // Если данных нет в localStorage, загружаем из JSON
+                    if (!singleData) {
+                        const response = await fetch('../../data/singles.json');
+                        if (!response.ok) {
+                            throw new Error('Failed to load single data');
+                        }
+                        const data = await response.json();
+                        singleData = data.singles.find(s => s.id === singleId);
+                    }
+
+                    if (singleData) {
+                        // Заполняем страницу данными сингла
+                        document.title = `${singleData.title} - КУОК`;
+                        document.getElementById('album-cover').src = singleData.cover;
+                        document.getElementById('album-title').textContent = singleData.title;
+                        document.getElementById('album-artist').textContent = singleData.artist;
+                        document.getElementById('album-year').textContent = singleData.year;
+                        document.getElementById('album-listens').textContent =
+                            `${formatListens(singleData.listens)} прослушиваний`;
+
+                        // Отображаем трек
+                        const tracksList = document.getElementById('tracks-list');
+                        const trackElement = document.createElement('div');
+                        trackElement.className = 'track-item';
+                        trackElement.innerHTML = `
+                            <div class="track-position">
+                                <span class="position-number">1</span>
+                            </div>
+                            <div class="track-info">
+                                <h4 class="track-title">${singleData.title}</h4>
+                            </div>
+                            <div class="track-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${singleData.duration}</span>
+                            </div>
+                        `;
+                        tracksList.appendChild(trackElement);
+                    } else {
+                        throw new Error('Single not found');
+                    }
+                } catch (error) {
+                    console.error('Error loading single:', error);
+                    showNotification('Ошибка загрузки данных сингла');
+                    setTimeout(() => {
+                        window.location.href = '../../index.html';
+                    }, 2000);
+                }
+            } else {
+                showNotification('ID сингла не указан');
+                setTimeout(() => {
+                    window.location.href = '../../index.html';
+                }, 2000);
+            }
+        });
+    </script>
 </body>
 
 </html>
