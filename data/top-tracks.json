@@ -1,0 +1,48 @@
+{
+    "tracks": [{
+            "id": "ruki",
+            "title": "РУКИ ТЯНУТСЯ",
+            "artist": "KYOK",
+            "album": "IMAGO",
+            "listens": 3500000,
+            "duration": "3:45"
+
+        },
+        {
+            "id": "puls",
+            "title": "ПУЛЬС",
+            "artist": "KYOK",
+            "album": "СТОП СИНАЛ: КРАСНЫЙ СВЕТ",
+            "listens": 3200000,
+            "duration": "4:12"
+
+        },
+        {
+            "id": "nozhevoe",
+            "title": "НОЖЕВОЕ",
+            "artist": "KYOK",
+            "album": "IMAGO",
+            "listens": 3000000,
+            "duration": "3:58"
+
+        },
+        {
+            "id": "dorogoe",
+            "title": "ДОРОГОЕ РАЗВЛЕЧЕНИЕ",
+            "artist": "KYOK",
+            "album": "КРАСНОСТЬ",
+            "listens": 2800000,
+            "duration": "4:30"
+
+        },
+        {
+            "id": "daleko",
+            "title": "ДАЛЕКО и НАДОЛГО",
+            "artist": "KYOK",
+            "album": "IMAGO",
+            "listens": 2500000,
+            "duration": "3:55"
+
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "singles": [{
+            "id": "corrida",
+            "title": "CORRIDA",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 450000,
+            "cover": "https://t2.genius.com/unsafe/344x344/https%3A%2F%2Fimages.genius.com%2F68ec762a3ab0241d57e9ac04c516d00c.1000x1000x1.png",
+            "duration": "3:45"
+        },
+        {
+            "id": "una",
+            "title": "UNA",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 320000,
+            "cover": "https://t2.genius.com/unsafe/344x344/https%3A%2F%2Fimages.genius.com%2Ff9f1ff800293054628ef749079336d20.1000x1000x1.png",
+            "duration": "3:45"
+        },
+        {
+            "id": "vozduh",
+            "title": "ВОЗДУХ",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 420000,
+            "cover": "https://t2.genius.com/unsafe/344x344/https%3A%2F%2Fimages.genius.com%2F21566d33c83ead1d6e46836802cc6a1e.1000x1000x1.png",
+            "duration": "3:55"
+        },
+        {
+            "id": "wakarimasen",
+            "title": "WAKARIMASEN",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 350000,
+            "cover": "https://t2.genius.com/unsafe/344x344/https%3A%2F%2Fimages.genius.com%2F09639b28041b0d48abd3c794648bae23.1000x1000x1.png",
+            "duration": "4:05"
+        }
+    ]
+}

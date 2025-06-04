@@ -1,0 +1,600 @@
+{
+    "albums": [{
+            "id": "imago",
+            "title": "IMAGO (Deluxe)",
+            "artist": "КУОК (QUOK)",
+            "year": 2022,
+            "listens": 1500000,
+            "cover": "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2Fcfc8d727402e2d58a6ef3fbbfb73d3f7.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "Интро (Intro I)",
+                    "duration": "1:30"
+                },
+                {
+                    "number": 2,
+                    "title": "Отвали, я в норме (Get Away, I'm OK)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 3,
+                    "title": "Перезагрузка (Restart)",
+                    "duration": "3:20"
+                },
+                {
+                    "number": 4,
+                    "title": "Ножевое (Knife Wound)",
+                    "duration": "3:15"
+                },
+                {
+                    "number": 5,
+                    "title": "Ворк слип репит 2 (Work Sleep Repeat)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 6,
+                    "title": "Quvi",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 7,
+                    "title": "Успокой меня (Talk Me Down)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 8,
+                    "title": "Помолчим об этом (Let's Keep Quiet About It)",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 9,
+                    "title": "Слова, которых нет (Words That Aren't Said)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 10,
+                    "title": "Apathy Theme",
+                    "duration": "2:45"
+                },
+                {
+                    "number": 11,
+                    "title": "Дофамин (Dopamine)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 12,
+                    "title": "Метаморфозы (Metamorphosis)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 13,
+                    "title": "Наивность (Naivety)",
+                    "duration": "3:15"
+                },
+                {
+                    "number": 14,
+                    "title": "Бежим (Running)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 15,
+                    "title": "Далеко и надолго (Far Away And For A Long Time) (Ft. ATL)",
+                    "duration": "4:10"
+                },
+                {
+                    "number": 16,
+                    "title": "Concorde",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 17,
+                    "title": "Roztoky Bop (Ft. BLUNT (RUS))",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 18,
+                    "title": "Миллион мегатонн (Million Megatons)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 19,
+                    "title": "Imago",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 20,
+                    "title": "Inner by КУОК (QUOK) & Voliik",
+                    "duration": "3:20"
+                },
+                {
+                    "number": 21,
+                    "title": "Lo Siento",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 22,
+                    "title": "Кислота (Acid)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 23,
+                    "title": "Планета не вращается (Planet Doesn't Rotate)",
+                    "duration": "4:05"
+                }
+            ]
+        },
+        {
+            "id": "krasnost",
+            "title": "КРАСНОСТЬ (QUALIA)",
+            "artist": "КУОК (QUOK)",
+            "year": 2020,
+            "listens": 1200000,
+            "cover": "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F6161b75129e2b1216139b22588bd0e8f.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "Дорогое развлечение (Costly Entertainment)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 2,
+                    "title": "Соучастница (Accomplice)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 3,
+                    "title": "Исповедь (Confession)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 4,
+                    "title": "Кто и зачем? (Who And Why?)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 5,
+                    "title": "Птица (The Bird)",
+                    "duration": "4:10"
+                },
+                {
+                    "number": 6,
+                    "title": "Sabbath",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 7,
+                    "title": "v90 Nilsson",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 8,
+                    "title": "Русская душа (Russian Soul)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 9,
+                    "title": "Qualia",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 10,
+                    "title": "Малый успех (Small success)",
+                    "duration": "3:20"
+                }
+            ]
+        },
+        {
+            "id": "djangl",
+            "title": "Джангл (Jungle)",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 1800000,
+            "cover": "https://avatars.mds.yandex.net/i?id=b57112c1cec300cb1d87f3345fca751197e5203c-4709556-images-thumbs&n=13",
+            "tracks": [{
+                    "number": 1,
+                    "title": "Каменный остров (Stone Island)",
+                    "duration": "4:15"
+                },
+                {
+                    "number": 2,
+                    "title": "Я эхо (Ты эхо) (I am Echo)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 3,
+                    "title": "Недоразумение (Misunderstanding)",
+                    "duration": "4:05"
+                },
+                {
+                    "number": 4,
+                    "title": "Влечение (Attraction)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 5,
+                    "title": "Обведенный мелом (Circled By A Chalk)",
+                    "duration": "4:30"
+                },
+                {
+                    "number": 6,
+                    "title": "Под потолком (Under The Ceiling) (Ft. AISILY)",
+                    "duration": "4:20"
+                },
+                {
+                    "number": 7,
+                    "title": "В твоей голове (In Your Head)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 8,
+                    "title": "Одно большое сердце (A Big Heart)",
+                    "duration": "4:10"
+                },
+                {
+                    "number": 9,
+                    "title": "Проклинаю интернет (Cursing The Internet)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 10,
+                    "title": "Армагеддон (Armageddon) (Ft. PALC)",
+                    "duration": "4:25"
+                },
+                {
+                    "number": 11,
+                    "title": "Лучшее наказание (Best Punishment)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 12,
+                    "title": "Решай за меня (Decide For Me)",
+                    "duration": "4:15"
+                },
+                {
+                    "number": 13,
+                    "title": "Джангл (Jungle)",
+                    "duration": "4:30"
+                }
+            ]
+        },
+        {
+            "id": "decadance2",
+            "title": "DECADANCE 2",
+            "artist": "КУОК (QUOK)",
+            "year": 2019,
+            "listens": 900000,
+            "cover": "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F8f30d8bc5ee5157d4e1334f5ccace8c2.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "РОЙ (ROY)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 2,
+                    "title": "ЦЕПЬ (CHAIN)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 3,
+                    "title": "НУАР 2 (NOIR 2)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 4,
+                    "title": "СЧАСТЬЕ ЛЮБИТ ТИШИНУ (HAPPINESS LOVES SILENCE)",
+                    "duration": "4:10"
+                },
+                {
+                    "number": 5,
+                    "title": "ВОРК СЛИП РЕПИТ (WORK SLEEP REPEAT)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 6,
+                    "title": "ПРИЕМ (PRIEM)",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 7,
+                    "title": "НЕ ПРАВ (NOT RIGHT) (Ft. MISSU)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 8,
+                    "title": "ГЕТТОТУРИЗМ (GHETTOTOURISM)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 9,
+                    "title": "ТРИБЬЮТ ВСЕМУ (TRIBUTE TO EVERYTHING)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 10,
+                    "title": "ВЫБОР (CHOICE)",
+                    "duration": "3:20"
+                },
+                {
+                    "number": 11,
+                    "title": "ТАНЦУЙ (DANCE) (Ft. WHY, BERRY)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 12,
+                    "title": "ROZTOKY ANDEGRAUND",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 13,
+                    "title": "НА УХМЫЛКЕ (WITH A GRIN) (Ft. DEADSPLASH)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 14,
+                    "title": "ВЕЧЕР, Я СНОВА В МОСКВЕ (EVENING, I'M BACK IN MOSCOW)",
+                    "duration": "3:45"
+                }
+            ]
+        },
+        {
+            "id": "adhd1725",
+            "title": "17/25 ADHD",
+            "artist": "КУОК (QUOK)",
+            "year": 2025,
+            "listens": 0,
+            "cover": "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F790b78c1d819d3978ccbcca22426fc62.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "U Promise",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 2,
+                    "title": "Coma (VIP)",
+                    "duration": "4:12"
+                },
+                {
+                    "number": 3,
+                    "title": "Metamorphosis [17/25 ADHD]",
+                    "duration": "3:58"
+                },
+                {
+                    "number": 4,
+                    "title": "Rumblecore (Genesis / Idi Za Mnoj Flip)",
+                    "duration": "4:30"
+                },
+                {
+                    "number": 5,
+                    "title": "Megapolis",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 6,
+                    "title": "BADBOYNOHEAD",
+                    "duration": "4:15"
+                },
+                {
+                    "number": 7,
+                    "title": "Wobblegum",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 8,
+                    "title": "Punch It!",
+                    "duration": "4:05"
+                },
+                {
+                    "number": 9,
+                    "title": "Nozhevoje",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 10,
+                    "title": "StoneIsland [17/25 ADHD]",
+                    "duration": "4:20"
+                },
+                {
+                    "number": 11,
+                    "title": "UNA (Deathoria Remix)",
+                    "duration": "4:15"
+                }
+            ]
+        },
+        {
+            "id": "quvi",
+            "title": "QUVI",
+            "artist": "КУОК (QUOK)",
+            "year": 2023,
+            "listens": 300000,
+            "cover": "https://images.genius.com/8f2e0c4bb1ef0ff901c31dabc03404a9.300x300x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "LOTUSES",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 2,
+                    "title": "МОШПИТ (ДАЛ УГЛА) (MOSHPIT)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 3,
+                    "title": "АУТСАЙДЕР (OUTSIDER)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 4,
+                    "title": "ПРИЕДЬ КО МНЕ (COME TO ME)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 5,
+                    "title": "НОВАЯ (NEW)",
+                    "duration": "3:25"
+                }
+            ]
+        },
+        {
+            "id": "loveblood",
+            "title": "Love, Blood & Diamonds",
+            "artist": "КУОК (QUOK)",
+            "year": 2021,
+            "listens": 500000,
+            "cover": "https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F0f79a00ede914cf6072fedce25ddbc21.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "INTRO",
+                    "duration": "1:30"
+                },
+                {
+                    "number": 2,
+                    "title": "LOVE",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 3,
+                    "title": "BLOOD",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 4,
+                    "title": "DIAMONDS (Ft. ISAEVA)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 5,
+                    "title": "OUTRO",
+                    "duration": "1:45"
+                }
+            ]
+        },
+        {
+            "id": "decadance3",
+            "title": "DECADANCE 3",
+            "artist": "КУОК (QUOK)",
+            "year": 2020,
+            "listens": 900000,
+            "cover": "https://t2.genius.com/unsafe/300x0/https%3A%2F%2Fimages.genius.com%2F884d71c4fe59911c69852ee8a06bd957.1000x1000x1.png",
+            "tracks": [{
+                    "number": 1,
+                    "title": "ТРЕТИЙ ЛИШНИЙ (ODD MAN OUT)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 2,
+                    "title": "ПАРИЖ (PARIS)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 3,
+                    "title": "ПУШКА (GUN) (Ft. ЛАУД (LAUD))",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 4,
+                    "title": "Я ИДУ ИСКАТЬ (I'M GOING TO SEARCH)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 5,
+                    "title": "ХАМЕЛЕОН (CHAMELEON)",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 6,
+                    "title": "ЗАХОТЕЛ — ВЗЯЛ (WANTED — TOOK) (Ft. SOULOUD)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 7,
+                    "title": "БУДКА (BOOTH) (Ft. SODA LUV & WHY, BERRY)",
+                    "duration": "4:15"
+                },
+                {
+                    "number": 8,
+                    "title": "БЕССОВЕСТНЫЙ (UNSCRUPULOUS)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 9,
+                    "title": "ПАРАНОИК (PARANOID) (Ft. KURT92)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 10,
+                    "title": "МЯСО (MEAT)",
+                    "duration": "3:20"
+                },
+                {
+                    "number": 11,
+                    "title": "СТРИТ КРЕДО (STREET CREDO)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 12,
+                    "title": "ВВЕРХ ДНОМ (UPSIDE DOWN) (Ft. IDAN)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 13,
+                    "title": "АВИАРЕЖИМ (FLIGHT MODE)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 14,
+                    "title": "ЗАТКНИСЬ И СЛУШАЙ (SHUT UP AND LISTEN) (Ft. DEADSPLASH)",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 15,
+                    "title": "СЛИТКИ (INGOTS) (Ft. HOOD BOY)",
+                    "duration": "3:50"
+                },
+                {
+                    "number": 16,
+                    "title": "ГОЛОВЫ (HEADS) (Ft. TINECCHI)",
+                    "duration": "3:35"
+                },
+                {
+                    "number": 17,
+                    "title": "KINO 2",
+                    "duration": "3:25"
+                },
+                {
+                    "number": 18,
+                    "title": "НИКЕМ (NOBODY) (Ft. DMT XIII)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 19,
+                    "title": "СПБ САЙФЕР (SPB CYPHER) (Ft. SODA LUV)",
+                    "duration": "3:55"
+                },
+                {
+                    "number": 20,
+                    "title": "PRAGUE 404 (SKIT)",
+                    "duration": "1:30"
+                },
+                {
+                    "number": 21,
+                    "title": "STAB ME (Ft. GABI (USA))",
+                    "duration": "3:45"
+                },
+                {
+                    "number": 22,
+                    "title": "Я НАУЧИЛСЯ ЛЕВИТИРОВАТЬ (I'VE LEARNT TO LEVITATE)",
+                    "duration": "3:30"
+                },
+                {
+                    "number": 23,
+                    "title": "МАСКИ 2 (MASKS 2)",
+                    "duration": "3:40"
+                },
+                {
+                    "number": 24,
+                    "title": "ЗАНАВЕС, АУТРО (CURTAIN, OUTRO)",
+                    "duration": "2:45"
+                }
+            ]
+        }
+    ]
+}
