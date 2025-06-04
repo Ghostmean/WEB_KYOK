@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сингл - КУОК</title>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/single.css">
+    <link rel="stylesheet" href="/WEB_KYOK/css/styles.css">
+    <link rel="stylesheet" href="/WEB_KYOK/css/single.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="../../js/script.js" defer></script>
+    <script src="/WEB_KYOK/js/script.js" defer></script>
 </head>
 
 <body class="light-theme">
@@ -16,11 +16,11 @@
         <div class="container navbar-container">
             <div class="logo">КУОК</div>
             <ul class="nav-links">
-                <li><a href="../../index.html">Главная</a></li>
-                <li><a href="../../index.html#artist">Об артисте</a></li>
-                <li><a href="../../index.html#top-tracks">Топ треки</a></li>
-                <li><a href="../../index.html#albums">Альбомы</a></li>
-                <li><a href="../../index.html#singles">Синглы</a></li>
+                <li><a href="/WEB_KYOK/index.html">Главная</a></li>
+                <li><a href="/WEB_KYOK/index.html#artist">Об артисте</a></li>
+                <li><a href="/WEB_KYOK/index.html#top-tracks">Топ треки</a></li>
+                <li><a href="/WEB_KYOK/index.html#albums">Альбомы</a></li>
+                <li><a href="/WEB_KYOK/index.html#singles">Синглы</a></li>
             </ul>
             <div class="theme-toggle">
                 <span class="theme-label">Тема:</span>
@@ -67,7 +67,7 @@
 
                     // Если данных нет в localStorage, загружаем из JSON
                     if (!singleData) {
-                        const response = await fetch('../../data/singles.json');
+                        const response = await fetch('/WEB_KYOK/data/singles.json');
                         if (!response.ok) {
                             throw new Error('Failed to load single data');
                         }
@@ -109,13 +109,13 @@
                     console.error('Error loading single:', error);
                     showNotification('Ошибка загрузки данных сингла');
                     setTimeout(() => {
-                        window.location.href = '../../index.html';
+                        window.location.href = '/WEB_KYOK/index.html';
                     }, 2000);
                 }
             } else {
                 showNotification('ID сингла не указан');
                 setTimeout(() => {
-                    window.location.href = '../../index.html';
+                    window.location.href = '/WEB_KYOK/index.html';
                 }, 2000);
             }
         });
