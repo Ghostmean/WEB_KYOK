@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сингл - КУОК</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/single.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../../js/script.js" defer></script>
+    <script src="../../js/single.js" defer></script>
+</head>
+
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">КУОК</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../index.html#artist">Об артисте</a></li>
+                <li><a href="../../index.html#top-tracks">Топ треки</a></li>
+                <li><a href="../../index.html#albums">Альбомы</a></li>
+                <li><a href="../../index.html#singles">Синглы</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <span class="theme-label">Тема:</span>
+                <button id="theme-toggle-btn" aria-label="Переключить тему">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="album-page">
+        <div class="album-container">
+            <div class="album-header">
+                <div class="album-cover-large">
+                    <img id="album-cover" src="" alt="Single Cover">
+                </div>
+                <div class="album-info-large">
+                    <h1 id="album-title"></h1>
+                    <p id="album-artist"></p>
+                    <div class="album-meta-large">
+                        <span id="album-year"></span>
+                        <span id="album-listens"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracks-section">
+                <h2>Треки</h2>
+                <div id="tracks-list" class="tracks-list"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

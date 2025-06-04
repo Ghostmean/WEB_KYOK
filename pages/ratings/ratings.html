@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинги - КУОК</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/ratings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=02fe999c-8cb5-410a-9dde-15bcb955a914&lang=ru_RU" type="text/javascript"></script>
+    <script src="../../js/script.js" defer></script>
+</head>
+
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">КУОК</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../index.html#artist">Об артисте</a></li>
+                <li><a href="../../index.html#top-tracks">Топ треки</a></li>
+                <li><a href="../../index.html#albums">Альбомы</a></li>
+                <li><a href="../../index.html#singles">Синглы</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <span class="theme-label">Тема:</span>
+                <button id="theme-toggle-btn" aria-label="Переключить тему">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="ratings-section">
+        <h1>Рейтинги альбомов</h1>
+
+        <div class="criteria-grid">
+            <div class="criteria-item" data-criteria="vocal">
+                <h3>Вокал</h3>
+                <p class="criteria-description">Оценка качества и выразительности вокала, техники исполнения и эмоциональной подачи.</p>
+                <div class="selected-album" id="vocal-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-music"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="vocal">Выбрать альбом</button>
+            </div>
+
+            <div class="criteria-item" data-criteria="instrumental">
+                <h3>Инструментал</h3>
+                <p class="criteria-description">Оценка инструментальной составляющей, аранжировок и музыкальных решений.</p>
+                <div class="selected-album" id="instrumental-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-guitar"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="instrumental">Выбрать альбом</button>
+            </div>
+
+            <div class="criteria-item" data-criteria="lyrics">
+                <h3>Тексты</h3>
+                <p class="criteria-description">Оценка качества текстов, их смысловой нагрузки и поэтичности.</p>
+                <div class="selected-album" id="lyrics-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-pen"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="lyrics">Выбрать альбом</button>
+            </div>
+
+            <div class="criteria-item" data-criteria="arrangement">
+                <h3>Аранжировка</h3>
+                <p class="criteria-description">Оценка композиционного построения, структуры и развития музыкальных идей.</p>
+                <div class="selected-album" id="arrangement-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="arrangement">Выбрать альбом</button>
+            </div>
+
+            <div class="criteria-item" data-criteria="sound">
+                <h3>Звучание</h3>
+                <p class="criteria-description">Оценка качества звукозаписи, сведения и мастеринга.</p>
+                <div class="selected-album" id="sound-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-volume-up"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="sound">Выбрать альбом</button>
+            </div>
+
+            <div class="criteria-item" data-criteria="overall">
+                <h3>Общее впечатление</h3>
+                <p class="criteria-description">Общая оценка альбома, его целостности и влияния на жанр.</p>
+                <div class="selected-album" id="overall-album">
+                    <div class="no-album-selected">
+                        <i class="fas fa-star"></i>
+                        <p>Альбом не выбран</p>
+                    </div>
+                </div>
+                <button class="select-album-btn" data-criteria="overall">Выбрать альбом</button>
+            </div>
+        </div>
+
+        <section class="find-author">
+            <h2>Найди автора</h2>
+            <div id="map" class="map-container"></div>
+        </section>
+    </main>
+
+    <!-- Модальное окно выбора альбома -->
+    <div class="modal" id="albumSelectionModal">
+        <div class="modal-content">
+            <span class="modal__close">&times;</span>
+            <h2>Выберите альбом</h2>
+            <div class="albums-grid" id="albumsGrid">
+                <!-- Альбомы будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Инициализация карты
+        ymaps.ready(function() {
+            const map = new ymaps.Map('map', {
+                center: [52.275115, 104.279620], // Иркутск
+                zoom: 12
+            });
+
+            // Добавление метки
+            const placemark = new ymaps.Placemark([52.275115, 104.279620], {
+                balloonContent: 'Местоположение автора'
+            });
+
+            map.geoObjects.add(placemark);
+        });
+
+        // Обработка выбора альбома
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectButtons = document.querySelectorAll('.select-album-btn');
+            const modal = document.getElementById('albumSelectionModal');
+            const closeBtn = modal.querySelector('.modal__close');
+            const albumsGrid = document.getElementById('albumsGrid');
+            let currentCriteria = '';
+
+            // Открытие модального окна
+            selectButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    currentCriteria = this.dataset.criteria;
+                    modal.style.display = 'block';
+                    loadAlbums();
+                });
+            });
+
+            // Закрытие модального окна
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            // Закрытие по клику вне модального окна
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Загрузка альбомов
+            async function loadAlbums() {
+                try {
+                    const response = await fetch('../../data/albums.json');
+                    const data = await response.json();
+
+                    albumsGrid.innerHTML = '';
+                    data.albums.forEach(album => {
+                        const albumCard = document.createElement('div');
+                        albumCard.className = 'album-card';
+                        albumCard.innerHTML = `
+                            <img src="${album.cover}" alt="${album.title}">
+                            <div class="album-info">
+                                <h3>${album.title}</h3>
+                                <p>${album.artist}</p>
+                            </div>
+                        `;
+
+                        albumCard.addEventListener('click', () => {
+                            selectAlbum(album);
+                            modal.style.display = 'none';
+                        });
+
+                        albumsGrid.appendChild(albumCard);
+                    });
+                } catch (error) {
+                    console.error('Error loading albums:', error);
+                }
+            }
+
+            // Выбор альбома
+            function selectAlbum(album) {
+                const albumContainer = document.getElementById(`${currentCriteria}-album`);
+                albumContainer.innerHTML = `
+                    <img src="${album.cover}" alt="${album.title}">
+                    <div class="album-info">
+                        <h3>${album.title}</h3>
+                        <p>${album.artist}</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

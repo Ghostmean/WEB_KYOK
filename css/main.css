@@ -1,0 +1,317 @@
+/* Стили для модального окна оценки */
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.average-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.average-rating {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.average-rating.pulse {
+    animation: pulse 0.5s ease-out;
+}
+
+.criteria-label {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.criteria-tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.criteria-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.criteria-label:hover .criteria-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -45px;
+}
+
+.rating-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-rating,
+.reset-rating {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-rating {
+    background: var(--primary-color);
+    color: white;
+    flex: 2;
+}
+
+.reset-rating {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    flex: 1;
+}
+
+.submit-rating:hover,
+.reset-rating:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-rating:active,
+.reset-rating:active {
+    transform: translateY(0);
+}
+
+
+/* Анимации */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slider-value.pulse {
+    animation: pulse 0.5s ease-out;
+}
+
+
+/* Улучшенные стили для слайдеров */
+
+.rating-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #ddd;
+    outline: none;
+    margin: 0;
+    position: relative;
+}
+
+.rating-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--slider-color, #ddd);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.rating-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--slider-color, #ddd) 0%, var(--slider-color, #ddd) var(--slider-progress, 0%), #ddd var(--slider-progress, 0%), #ddd 100%);
+    border-radius: 4px;
+    height: 8px;
+    transition: background 0.3s ease;
+}
+
+
+/* Стили для Firefox */
+
+.rating-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--slider-color, #ddd);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+.rating-slider::-moz-range-track {
+    background: linear-gradient(to right, var(--slider-color, #ddd) 0%, var(--slider-color, #ddd) var(--slider-progress, 0%), #ddd var(--slider-progress, 0%), #ddd 100%);
+    border-radius: 4px;
+    height: 8px;
+    transition: background 0.3s ease;
+}
+
+.rating-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.criteria-description {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+
+/* Медиа-запросы */
+
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+    .rating-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .average-rating-container {
+        justify-content: center;
+    }
+    .rating-actions {
+        flex-direction: column;
+    }
+    .submit-rating,
+    .reset-rating {
+        width: 100%;
+    }
+}
+
+
+/* Стили для уведомления */
+
+.rating-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+.slider-value {
+    position: absolute;
+    top: -25px;
+    transform: translateX(-50%) !important;
+    background-color: var(--slider-color, var(--primary-color));
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.slider-value::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--slider-color, var(--primary-color));
+}
+
+.slider-value.active {
+    transform: translateX(-50%) translateY(-5px) scale(1.1) !important;
+}
+
+
+/* Стили для карусели Swiper */
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альбом - КУОК</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/album.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../../js/script.js" defer></script>
+</head>
+
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">КУОК</div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../index.html#artist">Об артисте</a></li>
+                <li><a href="../../index.html#top-tracks">Топ треки</a></li>
+                <li><a href="../../index.html#albums">Альбомы</a></li>
+                <li><a href="../../index.html#singles">Синглы</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <span class="theme-label">Тема:</span>
+                <button id="theme-toggle-btn" aria-label="Переключить тему">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="album-page">
+        <div class="album-container">
+            <div class="album-header">
+                <div class="album-cover-large">
+                    <img id="album-cover" src="" alt="Album Cover">
+                </div>
+                <div class="album-info-large">
+                    <h1 id="album-title"></h1>
+                    <p id="album-artist"></p>
+                    <div class="album-meta-large">
+                        <span id="album-year"></span>
+                        <span id="album-listens"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracks-section">
+                <h2>Треки</h2>
+                <div id="tracks-list" class="tracks-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Загрузка данных альбома при загрузке страницы
+        document.addEventListener('DOMContentLoaded', async() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const albumId = urlParams.get('id');
+
+            if (albumId) {
+                try {
+                    // Пробуем получить данные из localStorage
+                    let albumData = JSON.parse(localStorage.getItem('currentAlbum'));
+
+                    // Если данных нет в localStorage, загружаем из JSON
+                    if (!albumData) {
+                        const response = await fetch('../../data/albums.json');
+                        if (!response.ok) {
+                            throw new Error('Failed to load album data');
+                        }
+                        const data = await response.json();
+                        albumData = data.albums.find(a => a.id === albumId);
+                    }
+
+                    if (albumData) {
+                        // Заполняем страницу данными альбома
+                        document.title = `${albumData.title} - КУОК`;
+                        document.getElementById('album-cover').src = albumData.cover;
+                        document.getElementById('album-title').textContent = albumData.title;
+                        document.getElementById('album-artist').textContent = albumData.artist;
+                        document.getElementById('album-year').textContent = albumData.year;
+                        document.getElementById('album-listens').textContent =
+                            `${formatListens(albumData.listens)} прослушиваний`;
+
+                        // Отображаем список треков
+                        const tracksList = document.getElementById('tracks-list');
+                        if (albumData.tracks) {
+                            albumData.tracks.forEach(track => {
+                                const trackElement = document.createElement('div');
+                                trackElement.className = 'track-item';
+                                trackElement.innerHTML = `
+                                    <div class="track-position">
+                                        <span class="position-number">${track.number}</span>
+                                    </div>
+                                    <div class="track-info">
+                                        <h4 class="track-title">${track.title}</h4>
+                                    </div>
+                                    <div class="track-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>${track.duration}</span>
+                                    </div>
+                                `;
+                                tracksList.appendChild(trackElement);
+                            });
+                        }
+                    } else {
+                        throw new Error('Album not found');
+                    }
+                } catch (error) {
+                    console.error('Error loading album:', error);
+                    showNotification('Ошибка загрузки данных альбома');
+                    setTimeout(() => {
+                        window.location.href = '../../index.html';
+                    }, 2000);
+                }
+            } else {
+                showNotification('ID альбома не указан');
+                setTimeout(() => {
+                    window.location.href = '../../index.html';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>
